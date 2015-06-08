@@ -102,3 +102,4 @@ For more details on the ESP8266 including the source of the above data see:
 
 
 
+This repository is a student project by Nicholas Roodt. Student number 120008.
