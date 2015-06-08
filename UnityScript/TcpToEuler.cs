@@ -9,7 +9,8 @@ public class TcpToEuler : MonoBehaviour {
 	public Int32 Port = 8080;									// Port
 	public string Host = "127.0.0.1";							// Host IP or domain.
 	public string myText = "";									// Line received from the TCP stream
-	public Vector3 currentRotation = new Vector3 (0, 0, 0);		// Line converted into a Vector3
+	public Vector3 currentRotation = new Vector3 (0, 0, 0);		// Line converted into a Vector3 for Gyro
+	public Vector3 currentForce = new Vector3 (0, 0, 0);		// Line converted into a Vector3 for accelerometer
 	
 
 	private bool socketReady = false;
@@ -28,10 +29,11 @@ public class TcpToEuler : MonoBehaviour {
 		string receivedText = readSocket();
 		
 		if (receivedText != "") {
-			
 			myText = receivedText;
-			//print (myText);
-			currentRotation = parseVector3(myText);
+			string[] splitText = myText.Split("|"[0]);
+
+			currentRotation = parseVector3(splitText[0].ToString());
+			currentForce = parseVector3(splitText[1].ToString());
 		}
 	}
 

@@ -43,11 +43,6 @@ void wifiCustomInit () {
       break;
     }
   }
-  if (WifiChoice == false) {
-    ConnectInternal(); 
-  } else {
-    ConnectRouter(); 
-  }
 }
 
 void ConnectInternal() {

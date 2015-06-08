@@ -36,7 +36,8 @@ void sendOutput()
         float tmpRoll = ToDeg(roll);
         float tmpYaw = ToDeg(yaw);
         float tmpPitch = ToDeg(pitch);
-        String outputMSG = (String)tmpPitch + "," + (String)tmpYaw + "," + (String)tmpRoll;
+        
+        String outputMSG = (String)tmpPitch + "," + (String)tmpYaw + "," + (String)tmpRoll + "|" + (String)ReturnVal(1) + "," + (String)ReturnVal(2) + "," + (String)ReturnVal(3);
         Serial.println(outputMSG);
         if (getWifiReady () == true){
           sendMessage (outputMSG);

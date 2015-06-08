@@ -227,3 +227,17 @@ void loop() {
     sendOutput();
   }
 }
+
+int ReturnVal(int val) {
+ switch (val) {
+   case 1:
+     return accel_x;
+     break;
+   case 2:
+     return accel_y;
+     break;
+   case 3:
+     return accel_z;
+     break;
+ }
+}
