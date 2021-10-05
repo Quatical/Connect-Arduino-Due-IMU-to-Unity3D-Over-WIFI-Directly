@@ -1,0 +1,6 @@
+Components:
+
+Arduino Due
+Pololu AltIMU-10 v4
+ESP8266 WIFI Serial Transceiver version ESP-01
+Two pull-up resistors for i2c (1k Ohm to 4.7k Ohm. Recommend higher resistance)
